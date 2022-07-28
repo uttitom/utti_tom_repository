@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DC_simulation </title>
+    <link rel="stylesheet" href="DC_Simulation.css">
+
+</head>
+<body>
+<header>
+
+    <div class="title">
+        <span class="sp_title1">ＤＣシミュレーション</span>
+    </div>
+    <div class="menu_btn1" id="menu_btn1">
+        <span class="sp sp1" id="sp1"></span>
+        <span class="sp sp2" id="sp2"></span>
+        <span class="sp sp3" id="sp3"></span>
+        <div class="s_menu1">menu</div>
+    </div>
+    <div class="menu_btn2" id="menu_btn2">
+        <span class="sp_2 sp4" id="sp4"></span>
+        <span class="sp_2 sp5" id="sp5"></span>
+        <span class="sp_2 sp6" id="sp6"></span>
+        <div class="s_menu2">sim</div>
+    </div>
+
+</header>
+
+<nav class="nav1" id="nav1">
+    <ul>
+        <li>
+            <a href="../../index.html">ホーム</a>
+        <li>
+            <a href="../../plan/plan.html">商品一覧</a>
+        </li>
+        <li>
+            <a href="../simulation.html">シミュレーション</a>
+        </li>
+        <li>
+            <a href="../../life_plan/index.html">ライフプラン</a>   
+        </li>          
+        <li>
+            <a href="../../documentation/documentation.html">資料（規約等）</a>
+        </li>
+    </ul>
+</nav>
+
+<nav class="status1" id="status1">
+    <ul>
+        <li>
+            <a href="../db/db_simulation.html">ＤＢ</a>
+        </li>
+        <li>
+            <a href="../new_db/new_db_simulation.html">新ＤＢ（選択制） </a>
+        </li>
+        <li>
+            <a>　ＤＣ</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container-M">
+
+    <div class="container0 container " id="container0">
+
+        <button id="clBtn" class="clBtn">クリア</button>
+
+        <p>次の数値を入力してください。</p>
+        <label>
+            ①加入年齢　<input type="number" id="age0" min="18" max="64">歳（64歳まで）
+        </label>
+        <label>
+            ②退職年齢　<input type="number" id="retireAge" min="60" max="64">歳
+        </label>
+        <label>
+            ③月額掛金　<input type="number" id="premium0">円
+        </label>
+        <label>                   
+            ④想定利率
+            <select name="interest0" id="interest0">
+        
+                <option value="0">0%</option>
+                <option value=".005">0.5%</option>
+                <option value=".01">1.0%</option>
+                <option value=".015">1.5%</option>
+                <option value=".02">2.0%</option>
+                <option value=".025">2.5%</option>
+                <option value=".03">3.0%</option>
+                <option value=".035">3.5%</option>
+                <option value=".04">4.0%</option>
+                <option value=".045">4.5%</option>
+                <option value=".05">5.0%</option>
+                
+            </select>
+        </label>
+
+        <p class="tf">　　※引継資産がある場合</p>
+        <p>　　➡　<input id="tfBtn" class="tfBtn" value="表示"></p> 
+                        
+        <label id="tfAsset" class="tfAsset">  
+            ⑤引継資産　<input type="number" id="asset">円
+        </label> 
+        <label class="add">
+            <p>※期中で掛金・利率を変更する場合 ➡</p>
+            <button id="addBtn">変更</button>
+        </label>                                  
+    </div>
+    <div class="container1 container" id="container1">
+        <label>
+            ①変更年齢1　<input type="number" id="age1" min="18" max="64">歳
+        </label>
+        <label>
+            ②変更掛金1　<input type="number" id="premium1">円
+        </label>
+        <label>
+        ③変更利率1　
+            <select name="interest1" id="interest1">
+                <option value="0">0%</option>
+                <option value=".005">0.5%</option>
+                <option value=".01">1.0%</option>
+                <option value=".015">1.5%</option>
+                <option value=".02">2.0%</option>
+                <option value=".025">2.5%</option>
+                <option value=".03">3.0%</option>
+                <option value=".035">3.5%</option>
+                <option value=".04">4.0%</option>
+                <option value=".045">4.5%</option>
+                <option value=".05">5.0%</option>
+            </select>
+        </label>    
+    </div>
+    <div class="container2 container" id="container2">
+        <label>
+            ①変更年齢2　<input type="number" id="age2" min="18" max="64">歳
+        </label>
+        <label>
+            ②変更掛金2　<input type="number" id="premium2">円
+        </label>
+        <label>
+            ③変更利率2
+            <select name="interest2" id="interest2">
+                <option value="0">0%</option>
+                <option value=".005">0.5%</option>
+                <option value=".01">1.0%</option>
+                <option value=".015">1.5%</option>
+                <option value=".02">2.0%</option>
+                <option value=".025">2.5%</option>
+                <option value=".03">3.0%</option>
+                <option value=".035">3.5%</option>
+                <option value=".04">4.0%</option>
+                <option value=".045">4.5%</option>
+                <option value=".05">5.0%</option>
+            </select>
+        </label>    
+    </div>
+    <div class="container3 container" id="container3">
+        <label>
+            ①変更年齢3　<input type="number" id="age3" min="18" max="64">歳
+        </label>
+        <label>
+            ②変更掛金3　<input type="number" id="premium3">円
+        </label>
+        <label>
+            ③変更利率3
+            <select name="interest3" id="interest3">
+                <option value="0">0%</option>
+                <option value=".005">0.5%</option>
+                <option value=".01">1.0%</option>
+                <option value=".015">1.5%</option>
+                <option value=".02">2.0%</option>
+                <option value=".025">2.5%</option>
+                <option value=".03">3.0%</option>
+                <option value=".035">3.5%</option>
+                <option value=".04">4.0%</option>
+                <option value=".045">4.5%</option>
+                <option value=".05">5.0%</option>
+            </select>
+        </label>    
+    </div>
+
+    <div class="container4 container">
+        <button id="calcBtn" class="calcBtn">計算結果</button>   <!-- 計算結果　出力ボタン -->
+        <div id="result" class="result">
+                <div id="result1" class="result1"></div>
+                <div id="premiumS" class="premiumS "></div>
+                <div id="interestS" class="interestS"></div>
+        </div>
+    </div>
+
+    
+    <div class="container5 container">
+        <button id="setTable" class="setTable">表作成</button> <!--　 経過表作成　出力ボタン -->
+        <div class="radio-box"id="radio-box" >
+        <label><input type="radio" name="radio" class="radio" id="yearly" checked> 年 </label>
+        <label><input type="radio" name="radio" class="radio" id="monthly"> 月 </label>
+        <label><input type="radio" name="radio" class="radio" id="five_years"> 5年ごと<p>(5年未満は1年ごと)</p> </label>                
+        </div>
+                    
+    </div>
+    
+    <div class="container6 container">
+        
+        <table id="table">　　　　　　　　　　　<!-- 経過表 -->
+            <p class="asset_amount" id="asset_amount"></p>
+            <thead id="t_head"></thead>
+            <tbody id="t_body"></tbody>
+        </table>        
+    </div>
+
+</div>
+    
+
+    
+    <script src="DC_Simulation.js"></script>
+</body>
+</html>

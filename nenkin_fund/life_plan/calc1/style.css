@@ -1,0 +1,153 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #555;
+}
+
+html {
+  font-size: 22px;
+}
+@media (min-width:800px) {
+  html {
+    font-size: 30px;
+  }
+  .container01{
+    margin: .2rem 0;
+  }
+}
+.title {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: .5rem;
+}
+.container{
+  max-width: 25rem;
+  margin: 0 auto;
+  background-color: #cff;
+}
+.return{
+  display: block;
+  text-align: right;
+  margin-right: 1rem;
+  font-size: .8rem;
+}
+.container01 {
+  border: 1rem solid #cff;
+  background-color: #cff;
+  font-size: .8rem;
+  display: grid;
+  grid-template:
+   "fund1 fund2 fund3" 3rem
+   "pension_sum1 pension_sum2 pension_sum3" 3rem
+   "reduction1 reduction2 reduction3" 3rem
+   "cost cost cost" 5rem 
+   "term term term" 5rem
+   "pension pension pension" 5rem
+   /1fr 1fr 1fr;
+}
+
+.cost,.term,.pension{
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.fund1{
+  grid-area: fund1;
+}
+.fund2{
+  grid-area: fund2;
+}
+.fund3{
+  grid-area: fund3;
+}
+
+.pension_sum1{
+  grid-area: pension_sum1;
+}
+.pension_sum2{
+  grid-area: pension_sum2;
+}
+.pension_sum3{
+  grid-area: pension_sum3;
+}
+
+.reduction1{
+  grid-area: reduction1;
+}
+.reduction2{
+  grid-area: reduction2;
+}
+.reduction3{
+  grid-area: reduction3;
+}
+
+.result1{
+  border-left: #5df solid .5rem;
+}
+.result2{
+ font-size: 1.1rem;
+}
+.result3{
+  border-right: #5df solid .5rem;
+}
+
+.fund{
+  border-top: #5df solid .5rem;
+}
+.reduction{
+  border-top: #5df solid .1rem;
+  border-bottom: #5df solid .5rem;
+}
+
+.cost {
+  grid-area: cost;
+}
+.term {
+  grid-area: term;
+}
+.pension {
+  grid-area: pension;
+}
+
+.output{
+  color: red;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.cost1>span,.term1>span,.pension1>span{
+  font-weight: bold;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  height: 0.8rem;
+  min-width: 10rem;
+  background-color: #fcc;
+  border-radius: 0.2rem;
+}
+
+.result1,.result3{
+  text-align: center;
+  font-size: .8rem;
+  font-weight: bold;
+  line-height: 3rem;
+  background-color: #fff;
+  color: #77f;
+}
+.result2{
+  text-align: right;
+  font-weight: bold;
+  line-height: 3rem;
+  background-color: #fff;
+  color: #f00;
+}
+
+span {
+  font-size: .7rem;
+}
+.cost1>span,.term1>span,.pension1>span {
+  color: #77f;
+  font-size: .8rem;
+}
+

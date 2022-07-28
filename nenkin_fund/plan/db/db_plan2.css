@@ -1,0 +1,150 @@
+/* １．ＤＢプランの仕組み */
+
+.container{
+    max-width: 22rem;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+}
+#container_00{
+    max-width: 30rem;
+}
+.container:first-of-type{
+    margin-top: 5rem;
+}
+#display_01>ul>li{
+    list-style: none;
+    font-weight: bold;
+    color: #00f;
+    cursor:pointer;
+    margin-top:1rem;
+    padding-left: .5rem;
+}
+
+small{
+    font-weight: 400;
+}
+.m2{
+    margin: .5rem 0;
+    font-size: .8rem;
+}
+.m3{
+    font-weight:bold;
+    border-right-color: #99f;
+    color: #00f;
+    margin-top: 1rem;
+}
+
+#article_00{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+
+#display_00>ul>li{
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.sp10{
+    color: #f00;
+}
+
+#display_00{
+    border: .5rem double #99f;
+    /* box-shadow: .2rem .2rem #33f; */
+    padding: .5rem;
+    background-color: #fff;
+}
+
+
+.s_container{
+    display: none;
+    /* margin-left: .5rem; */
+    font-size: .8rem;
+}
+.s_container.open{
+    display: block;
+}
+
+/* ul>img{
+    display: none;
+    margin: 0 1rem;
+} */
+
+.article{
+    border:  .2rem solid #99f;
+    background-color: #009;
+    color: #fff;
+    padding-left: 1rem;
+    cursor:pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.article:not(:first-child){
+    border: none;
+}
+
+#img1,#img2,#img3{
+    display: none;
+    padding: 0 1rem;
+}
+
+#img1.open,#img2.open,#img3.open{
+    display: block;
+}
+/* .can1,.can2,.can3{
+    display: none;
+}
+.can1.open,.can2.open,.can3.open{
+    display: block;
+} */
+
+/* ３．給付設計 */
+
+
+/* ４．主な給付 */
+
+
+/* ５．掛金コース */
+
+.m3::before{
+    content:'● ';
+    color: #99f;
+}
+.m3:hover{
+    cursor: pointer;
+}
+.fixed_table{
+    display: none;
+    padding-left: 1rem;
+}
+.fixed_table.open{
+    display: block;
+}
+.ratio_table{
+    display: none;
+    padding-left: 1rem;
+}
+.ratio_table.open{
+    display: block;
+}
+.s_container_05>ul>li{
+    padding-left: 1rem;
+
+}
+
+
+@media (max-width:700px) {
+    html{
+        font-size: 18px;
+    }
+    nav ul li:not(:nth-child(4)){
+        margin-right: .3rem;
+    }
+    /* .container{
+    max-width: 20rem;
+    } */
+
+}

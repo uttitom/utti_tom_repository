@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+html{
+    font-size: 20px;
+}
+header>a{
+    display: block;
+    margin:2rem 0 0 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: deeppink;
+}
+
+
+.approval_number{
+    text-align: end;
+    margin-right: 0.5rem;
+}
+.agreements_title{
+    margin: 50px 0 50px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+
+}
+table,th,td{
+    border: 0.5px dotted rgba(5,5,5,.5);
+    max-width: 1000px;
+    width: auto;
+    padding: 3px;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    margin-right: 10px;   
+}
+
+.contents_table{
+    text-align: center;
+    margin: 50px 0 50px 0;
+}
+.contents_table_container{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 3rem 0;
+}
+.contents{
+    width: 40.63rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+}
+.chapter{
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+}
+.clause{
+    font-size: 1.1rem;
+}
+.container,.provisions{
+    font-size: 1rem;
+    white-space: pre-wrap;
+    margin: 0 .6rem 0 .6rem;
+}
+.chart01{
+    width: 300px;
+    border: .06rem solid #333;
+    border-radius: 5%;
+    margin:0 0 0 4rem;
+}
+pre{
+    font-size: 1rem;
+}
+table:not(.table0){   
+        font-size: 0.5rem;
+}
+table:not(.table0)>td{
+    text-align: center;
+}
+.table08 td,.table09 td{
+    text-align: left;
+}
+.container_table{
+    margin-left: 0.63rem;
+}
+footer>a{
+    background-color: deeppink;
+    color:#fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: .5rem;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+}
+
+
+
+@media (max-width:700px) {
+    html{font-size: 12px;}  
+}
+@media print {
+    footer{
+        display: none;
+    }
+    
+}

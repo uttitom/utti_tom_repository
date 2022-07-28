@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New DB Simulation2</title>
+    <link rel="stylesheet" href="new_db_simulation.css">
+</head>
+<body>
+    <header>
+
+    <div class="title">
+        <span class="sp_title1">新ＤＢ（選択制）</span>
+    </div>
+    <div class="menu_btn1" id="menu_btn1">
+        <span class="sp sp1" id="sp1"></span>
+        <span class="sp sp2" id="sp2"></span>
+        <span class="sp sp3" id="sp3"></span>
+        <div class="s_menu1">menu</div>
+    </div>
+    <div class="menu_btn2" id="menu_btn2">
+        <span class="sp_2 sp4" id="sp4"></span>
+        <span class="sp_2 sp5" id="sp5"></span>
+        <span class="sp_2 sp6" id="sp6"></span>
+        <div class="s_menu2">sim</div>
+    </div>
+
+    </header>
+  
+    <nav class="nav1" id="nav1">
+        <ul>
+            <li>
+                <a href="../../index.html">ホーム</a>
+            <li>
+                <a href="../../plan/plan.html">商品一覧</a>
+            </li>
+            <li>
+                <a href="../simulation.html">シミュレーション</a>
+            </li>
+            <li>
+                <a href="../../life_plan/index.html">ライフプラン</a>   
+            </li>              
+            <li>
+                <a href="../../documentation/documentation.html">資料（規約等）</a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="status1" id="status1">
+        <ul>
+            <li>
+                <a href="../db/db_simulation.html">ＤＢ</a>
+            </li>
+            <li>
+                <a >　新ＤＢ（選択制) </a>
+            </li>
+            <li>
+                <a href="../dc/DC_Simulation.html">ＤＣ</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-lg">
+        <div class="container-md md1" >
+            
+            <label class="ml-2" enter">
+                次の項目に数値を入力してください。
+            </label> 
+            <label class="ml-2">
+                <!-- <button id="clBtn" class="clBtn btn">クリア</button> -->
+            <input type="button" value="クリア" id="clBtn" class="clBtn btn">
+            </label>   
+            <label class="ml-2">
+                ①加入年齢 <input type="number" id="join" class="join wd-1 mt-5 step=" 1" min="18" max=64 autofocus> 歳 (18～64歳まで)
+            </label>
+            <label class="ml-2" for="retire">
+                ②退職年齢 <input type="number" id="retire" class="retire wd-1 mt-2 step=" 1" min="18" max="70"> 歳 (70歳まで)
+            </label>
+            <label class="ml-2">
+                ③月額掛金 <input type="number" id="premium" class="premium wd-2 mt-2 step=" 100" min="1000" max="50000"> 円
+                (上限5万円)
+            </label>
+            <label class="ml-2">
+                途中掛金変更ありの場合 ➡<input type="button" value="変更ボタン" id="addBtn" class="addBtn btn mt-5">
+            </label>
+        </div>
+        <div class="container-md md2">
+            <div id="add1" class="add1">
+                <label class="ml-2">
+                    ①変更年齢1 <input type="number" id="join1" class="join1 wd-1 mt-2"> 歳
+                </label>
+                <label class="ml-2">
+                    ②変更掛金1 <input type="number" id="premium1" class="premium1 wd-2 mt-2"> 円
+                </label>
+            </div>
+            <div id="add2" class="add2 mt-5">
+                <label class="ml-2">
+                    ①変更年齢2 <input type="number" id="join2" class="join2 wd-1 mt-2"> 歳
+                </label>
+                <label class="ml-2">
+                    ②変更掛金2 <input type="number" id="premium2" class="premium2 wd-2 mt-2"> 円
+                </label>
+            </div>
+            <div id="add3" class="add3 mt-5">
+                <label class="ml-2">
+                    ①変更年齢3 <input type="number" id="join3" class="join3 wd-1 mt-2"> 歳
+                </label>
+                <label class="ml-2">
+                    ②変更掛金3 <input type="number" id="premium3" class="premium3 wd-2 mt-2"> 円
+                </label>
+            </div>
+        </div>
+        <div class="container-md md3">
+            <label>
+                <input type="button" value="給付計算" id="calcBtn" class="calcBtn btn btn-lg"> (年利率0.5%)
+            </label>
+            <label>
+                <input type="button" value="メリット(利息以外)" id="taxSipBtn" class="taxSipBtn btn mt-5">
+            </label>
+        </div>
+        <div class="container-md md5">
+            <div id="mask" class="mask"></div>
+            <div id="preBtn" class="preBtn">
+                (前提条件) <br>
+                ・給与収入が300～600万円ぐらいの方を想定。<br>
+                ・所得税・住民税の税率は各10%。<br>
+                ・社会保険料は収入の15%と仮定。<br>
+                ・年金計算において経過措置等は考慮しない。<br>
+                <br>
+                <p style="color: red;">⇒ 利息以外のメリット額は簡便計算による概算。</p><br>
+                <input type="button" id="close2" class="btn close2 Btn" value="閉じる">
+            </div>
+        </div>
+        <div class="container-md" md6>
+            <div id="result" class="result">
+                <div id="result1" class="result1 mt-2"></div>
+                <div id="premiumS" class="premiumS "></div>
+                <div id="interestS" class="interestS"></div>
+                <div id="nonInt" class="nonInt mt-2"></div>
+                <div id="tax1" class="tax1"></div>
+                <div id="sip1" class="sip1"></div>
+                <div id="pen1" class="pen1"></div>
+                <div id="message" class="message"></div>
+            </div>
+        </div>
+        <div class="container-md md7">
+            <p class="tableTitle">■給付額表 (金額単位:円)
+                <input type="button" value="給付額表" id="setTable" class="btn btn-secondary p-1 setTable Btn ml-2 d-inline">
+            </p>
+            <table class="mt-5">
+                <thead id="t_head"></thead>
+                <tbody id="t_body"></tbody>
+            </table>
+        </div>
+    </div>   
+    <script src="new_db_simulation.js"></script>
+ 
+</body>
+</html>

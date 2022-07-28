@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>current pension</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        
+    </style>
+</head>
+<body>
+    <div class="title">年金原資（定期分割）</div>
+    <div class="container">
+        <div class="container01">
+
+            <div class="result1">年金原資</div>
+            <div class="result2" id="result2">0</div>
+            <div class="result3">　万円</div>
+            
+            <div class="interest">
+
+                <label>
+                    <span>利率</span> 
+                    <select name="interest0" id="interest0">
+                
+                        <option value="0">0%</option>
+                        <option value=".005">0.5%</option>
+                        <option value=".010">1.0%</option>
+                        <option value=".015">1.5%</option>
+                        <option value=".020">2.0%</option>
+                        <option value=".025">2.5%</option>
+                        <option value=".030">3.0%</option>
+                        <option value=".035">3.5%</option>
+                        <option value=".040">4.0%</option>
+                        <option value=".045">4.5%</option>
+                        <option value=".050">5.0%</option>                                  
+                    </select>
+                </label>
+
+            </div>
+
+            <div class="pension">
+                <div class="pension1">
+                    <span>定期分割　</span>
+                    <output id="output_pension">10</output>
+                    <span>　万円</span>
+                </div>
+                <div class="pension2">
+                    <span>5万円</span>
+                    <input type="range" value="10" min="5" max="50" step="1" id="input_pension">
+                    <span>50万円</span>
+                </div>  
+            </div>
+        
+            <div class="term">
+                <div class="term1">
+                    <span>受取期間　</span>
+                    <output id="output_term">20</output>
+                    <span>　年</span>                      
+                </div>
+                <div class="term2">
+                    <span>5年</span>
+                    <input type="range" value="20" min="5" max="35" step="1" id="input_term">
+                    <span>35年</span
+                </div>
+            </div>            
+        </div>
+        <a href="../index.html" class="return">戻る</a>  
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

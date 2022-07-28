@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DB Simulation</title>
+    <link rel="stylesheet" href="db_simulation.css">
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="title">
+        <span class="sp_title1">ＤＢシミュレーション</span>
+    </div>   
+    <div class="menu_btn1" id="menu_btn1">        
+        <span class="sp sp1" id="sp1"></span>
+        <span class="sp sp2" id="sp2"></span>
+        <span class="sp sp3" id="sp3"></span>       
+        <div class="s_menu1">menu</div>       
+    </div>
+    <div class="menu_btn2" id="menu_btn2">       
+        <span class="sp_2 sp4" id="sp4"></span>
+        <span class="sp_2 sp5" id="sp5"></span>
+        <span class="sp_2 sp6" id="sp6"></span>       
+        <div class="s_menu2">sim</div>        
+    </div>
+</header>    
+
+<nav class="nav1" id="nav1">
+    <ul>
+        <li>
+            <a href="../../index.html">ホーム</a>
+        <li>
+            <a href="../../plan/plan.html">商品一覧</a>
+        </li>
+        <li>
+            <a href="../simulation.html">シミュレーション</a>
+        </li>
+        <li>
+            <a href="../../life_plan/index.html">ライフプラン</a>   
+        </li>          
+        <li>
+            <a href="../../documentation/documentation.html">資料（規約等）</a>
+        </li>
+    </ul>
+</nav>
+<nav class="status1" id="status1">
+    <ul>
+        <li>
+            <a>　ＤＢ</a>
+        </li>
+        <li>
+            <a href="../new_db/new_db_simulation.html">新ＤＢ（選択制）</a>
+        </li>
+        <li>
+            <a href="../dc/DC_Simulation.html">ＤＣ</a>
+        </li>
+    </ul>
+</nav>
+
+<main>
+    <div class="fund_pension">
+        <input type="button" value="クリア" id="clBtn" class="clBtn btn">        
+        <p>次の項目に数値を入力してください。</p> 
+
+        <div class="container container1">                         
+            <p class="section">（基金年金）</p>
+            <label>①加入年齢 <input type="number" id="join" class="number" min="18" max=64 autofocus> 歳 (18～64歳まで)</label> 
+            <label>②退職年齢 <input type="number" id="retire" min="18" class="number" max="70"> 歳 (70歳まで)</label>
+            <label>③掛金</label> 
+            <div id="p_box" class="p_box">
+                <div>
+                    <label> <input type="radio" name="title" id="flat_title">定額</label>
+                    <div class="flat_aria" id="flat_aria">
+                        <label>定額
+                            <select name="flat" id="flat"> 
+                                <option value="100">100円</option>          
+                                <option value="3000">3,000円</option>
+                                <option value="4000">4,000円</option>
+                                <option value="5000">5,000円</option>
+                                <option value="6000">6,000円</option>
+                                <option value="7000">7,000円</option>             
+                            </select>
+                        </label>                     
+                    </div>
+                </div>              
+                <div>
+                    <label> <input type="radio" name="title" id="fixed_title" >給与比例</label>
+                    <div class="fixed_aria" id="fixed_aria">
+                        <label>加入時給与　<input type="number" id="salary"c class="number">千円</label>
+                        <label>
+                            給与比例
+                            <select name="fixed" id="fixed">
+                                <option value=".004">0.4%</option>
+                                <option value=".01">1.0%</option>
+                                <option value=".015">1.5%</option>                                                           
+                                <option value=".02" selected>2.0%</option>
+                                <option value=".025">2.5%</option>
+                                <option value=".03">3.0%</option>       
+                            </select>
+                        </label>                                                            
+                    </div>
+                </div>
+            </div>
+            <br>          
+            <label> <input type="button" value="給付計算" id="calcBtn" class="calcBtn"> </label>
+            <label class="result_aria">(計算結果)</label>
+            <div class="result" id="result1">
+                <div id="result1_a"></div>
+                <div id="result1_b"></div>
+                <div id="result1_c"></div>
+            </div>
+        </div>        
+    </div>
+    <div class="gio_pension">
+        <p class="section">（地質年金）</p>
+        <div class="container2">
+            <p>
+                <label>①平均給与 <input type="number" id="remuneration" class="remuneration number" min="88"　max="650"> 千円</label>
+            </p>
+            <dfn>※ 平均給与</dfn>
+            <p class="explanation">
+             　平均給与とは、加入者期間中の毎月の給与(標準報酬月額)の合計額を加入者期間の月数で除したもの。シミュレーションにおいては、推定数値（目安は40歳前後の給与）を入力のこと。ただし、標準報酬月額のレンジ（98,000円以上650,000円以下）内の値とする。
+            </p>
+            <label> <input type="button" value="給付計算" id="calcBtn2" class="calcBtn2"> </label>
+            <label class="result_aria">(計算結果)</label>
+            <div class="result" id="result2">
+                <div id="result2_a"></div>
+                <div id="result2_b"></div>
+                <div id="result2_c"></div>
+                <div id="result2_d"></div>
+                <div id="result2_e"></div>
+            </div>             
+        </div>
+    </div>
+
+    <div class="container container3">
+
+        
+    </div>    
+    
+
+
+</main>
+
+
+
+<script src="db_simulation.js"></script>
+</body>
+</html>

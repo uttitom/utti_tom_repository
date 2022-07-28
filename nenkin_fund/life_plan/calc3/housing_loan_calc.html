@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>housing loan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="title">住宅ローン</div>
+    <div class="container">
+        <div class="container01">
+
+            <div class="result1">返済額</div>
+            <div class="result2" id="result2">0</div>
+            <div class="result3">　円</div>
+            
+            <div class="interest">
+
+                <label>
+                    <span>利率</span> 
+                    <select name="interest0" id="interest0">
+                
+                        <option value="0">0%</option>
+                        <option value=".005">0.5%</option>
+                        <option value=".01">1.0%</option>
+                        <option value=".015">1.5%</option>
+                        <option value=".02">2.0%</option>
+                        <option value=".025">2.5%</option>
+                        <option value=".03">3.0%</option>
+                        <option value=".035">3.5%</option>
+                        <option value=".04">4.0%</option>
+                        <option value=".045">4.5%</option>
+                        <option value=".05">5.0%</option>
+                
+                    </select>
+                </label>
+
+            </div>
+
+            <div class="loan">
+                <div class="loan1">
+                    <span>ローン額　</span>
+                    <output id="output_loan">3,000</output>
+                    <span>　万円</span>
+                </div>
+                <div class="loan2">
+                    <span>1千万</span>
+                    <input type="range" value="3000" min="1000" max="5000" step="100" id="input_loan">
+                    <span>5千万</span>
+                </div>  
+            </div>
+        
+            <div class="term">
+                <div class="term1">
+                    <span>返済期間　</span>
+                    <output id="output_term">20</output>
+                    <span>　年</span>                      
+                </div>
+                <div class="term2">
+                    <span>5年</span>
+                    <input type="range" value="20" min="5" max="50" step="5" id="input_term">
+                    <span>50年</span
+                </div>
+            </div>            
+        </div>
+        <a href="../index.html" class="return">戻る</a>  
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

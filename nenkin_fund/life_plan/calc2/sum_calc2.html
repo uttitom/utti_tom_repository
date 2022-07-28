@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserve amount</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        
+    </style>
+</head>
+<body>
+    <div class="title">積立金の計算</div>
+    <div class="container">
+        <div class="container01">
+
+            <div class="result1">積立金</div>
+            <div class="result2" id="result2">0</div>
+            <div class="result3">　円</div>
+            
+            <div class="interest">
+
+                <label>
+                    <span>利率</span> 
+                    <select name="interest0" id="interest0">
+                
+                        <option value="0">0%</option>
+                        <option value=".005">0.5%</option>
+                        <option value=".01">1.0%</option>
+                        <option value=".015">1.5%</option>
+                        <option value=".02">2.0%</option>
+                        <option value=".025">2.5%</option>
+                        <option value=".03">3.0%</option>
+                        <option value=".035">3.5%</option>
+                        <option value=".04">4.0%</option>
+                        <option value=".045">4.5%</option>
+                        <option value=".05">5.0%</option>
+                
+                    </select>
+                </label>
+
+            </div>
+
+
+            <div class="premium">
+                <div class="premium1">
+                    <span>積立額　</span>
+                    <output id="output_premium">10,000</output>
+                    <span>　円</span>
+                </div>
+                <div class="premium2">
+                    <span>0円</span>
+                    <input type="range" value="10000" min="0" max="100000" step="1000" id="input_premium">
+                    <span>10万円</span>
+                </div>  
+            </div>
+        
+            <div class="term">
+                <div class="term1">
+                    <span>積立期間　</span>
+                    <output id="output_term">5</output>
+                    <span>　年</span>                      
+                </div>
+                <div class="term2">
+                    <span>0年</span>
+                    <input type="range" value="5" min="0" max="50" step="5" id="input_term">
+                    <span>50年</span
+                </div>
+                <!-- <a href="../index.html" class="return">戻る</a>   -->
+            </div>            
+        </div>
+        <a href="../index.html" class="return">戻る</a>  
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

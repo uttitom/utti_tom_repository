@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulation</title>
+    <link rel="stylesheet" href="simulation.css">
+</head>
+<body>
+    <header>
+        <div class="title">
+            <span class="sp_title1">シミュレーション</span>
+        </div>
+        
+        <div class="menu_btn1" id="menu_btn1">        
+            <span class="sp sp1" id="sp1"></span>
+            <span class="sp sp2" id="sp2"></span>
+            <span class="sp sp3" id="sp3"></span>       
+            <div class="s_menu1">menu</div>       
+        </div>
+        <div class="menu_btn2" id="menu_btn2">       
+            <span class="sp_2 sp4" id="sp4"></span>
+            <span class="sp_2 sp5" id="sp5"></span>
+            <span class="sp_2 sp6" id="sp6"></span>       
+            <div class="s_menu2">sim</div>        
+        </div>
+    </header>
+
+
+    <nav class="nav1" id="nav1">
+        <ul>
+            <li>
+                <a href="db/db_simulation.html">ＤＢ</a>
+            </li>
+            <li>
+                <a href="new_db/new_db_simulation.html">新ＤＢ（選択制）</a>
+            </li>
+            <li>
+                <a href="dc/DC_Simulation.html">ＤＣ</a>
+            </li>
+
+        </ul>
+    </nav>
+    <nav class="nav2" id="nav2">
+        <ul>
+            <li>
+                <a href="../index.html">ホーム</a>
+            <li>
+                <a href="../plan/plan.html">商品一覧</a>
+            </li>
+            <li>
+                <a class="current_status">　シミュレーション</a>
+            </li>
+            <li>
+                <a href="../life_plan/index.html">ライフプラン</a>   
+            </li>  
+            <li>
+                <a href="../documentation/documentation.html">資料（規約等）</a>
+            </li>
+        </ul>
+    </nav>
+
+    <nav class="status1" id="status1">
+        <ul>
+            <li>
+                <a href="db/db_simulation.html">ＤＢ</a>
+            </li>
+            <li>
+                <a href="new_db/new_db_simulation.html">新ＤＢ（選択制）</a>
+            </li>
+            <li>
+                <a href="dc/DC_Simulation.html">ＤＣ</a>
+            </li>
+        </ul>
+    </nav>
+    <nav class="status2" id="status2">
+        <ul>
+            <li>
+                <a href="db/db_simulation.html">ＤＢ</a>
+            </li>
+            <li>
+                <a href="new_db/new_db_simulation.html">新ＤＢ（選択制）</a>
+            </li>
+            <li>
+                <a href="dc/DC_Simulation.html">ＤＣ</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        
+        <div class="content0">
+            <span class="content_title0">＜前提条件＞</span>
+        </div>
+            
+        <div class="container">    
+            <div class="content">
+                <!-- <span class="content_title "><a href="db/db_simulation.html">ＤＢシミュレーション</a></span> -->
+                    
+                <div class="box box_1">
+
+                    <span class="content_title "><a href="db/db_simulation.html">ＤＢシミュレーション</a></span>
+                    
+                    <ul>
+                        <li>対象となる加入者</li>
+                        <ul class="comment">
+                            <li>基金年金：平成28年9月以降の加入者。</li>
+                            <li>地質年金：地質関連事業所の加入者。</li>
+                        </ul>
+                        <li>給与指数は厚年の報酬指数(男)に基づく。</li>
+                        <li>厚年基金からの移行時経過措置は対象外。</li>
+                        <li>端数処理はＤＢ規約に基づく。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content">
+                <!-- <span class="content_title"><a href="new_db/new_db_simulation.html">新ＤＢ（選択制）シミュレーション</a></span>                  -->
+                <div class="box box_2">
+                    <span class="content_title"><a href="new_db/new_db_simulation.html">新ＤＢ（選択制）シミュレーション</a></span> 
+                    
+                    <ul>
+                        <li>対象者：新ＤＢ（選択制）の加入者。</li>
+                        <li>給付額は加算年金のみ。</li>
+                        <li>掛金は1000円以上50,000円の定額。</li>
+                        <li>端数処置はＤＢ規約に基づく。</li>                   
+                    </ul>
+                </div>
+             </div>
+
+            <div class="content">
+                <!-- <span class="content_title"><a href="dc/DC_Simulation.html">ＤＣシミュレーション</a></span>                     -->
+                <div class="box box_3">
+                    <span class="content_title"><a href="dc/DC_Simulation.html">ＤＣシミュレーション</a></span>  
+                    <ul>
+                        <li>対象者：ＤＣプランの加入者。</li>
+                        <li>想定利率：年0%～5%の範囲で設定。<br>　　　　　　(0.5%刻み)</li>
+                        <li>利息：年利を月利に換算し月複利で計算。</li>
+                        <p>　※ 月利率＝（１＋年利率）^(1/12)-1 で設定。</p>
+                        <li>端数処理：1円未満切捨て。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       
+    <script src="simulation.js"></script>
+</body>
+</html>

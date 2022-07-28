@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 18px;
+}
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    min-width: 18rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #bbffcc;
+    border: .3rem solid #faa;
+    margin: 5rem;
+}
+p{
+    font-size: 2rem;
+    font-weight: bold;
+}

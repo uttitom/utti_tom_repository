@@ -1,0 +1,471 @@
+/* 全体設定　と　リセットCSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "sans-serif";
+    color: #55a;
+}
+html{
+    font-size: 24px;
+}
+body{
+    background-color: #ffeef9;
+}
+
+/* １．基金タイトル、２．メニュー・バー、３．プランタイトル */
+
+
+.title{
+    position: fixed;
+    top: 0;
+    background-color: #cc55cc;;
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    color: #fff;
+    justify-content: center;
+
+}
+.sp_title1{
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+/*　　メイン・メニュー　　 */
+
+.menu_btn1{
+    /* display: none; */
+    position:fixed;
+    top: .25rem;
+    left: .3rem;
+    width: 2rem;
+    height: 2.5rem;
+    background-color: #ffccbb;
+    cursor: pointer;
+}
+.sp{
+    position: absolute;
+    top: .5rem;
+    right: .2rem;
+    display: inline-block;
+    width: 1.5rem;
+    height: .05rem;
+    border-radius: .05rem;
+    border: .05rem solid #555;
+    background-color: #555;
+    vertical-align: top;
+}
+.sp1{
+    transition: .2s;
+}
+.sp2{
+    margin-top: .5rem;
+    transition: .2s;
+}
+.sp3{
+    margin-top: 1rem;
+    transition: .2s;
+}
+.sp1.close{
+    transform:translateY(.5rem) rotate(45deg);
+}
+.sp2.close{
+    display: none;
+}
+.sp3.close{
+    transform:translateY(-.5rem) rotate(-45deg);
+   
+}
+
+.s_menu1{
+    position: fixed;
+    top: 2rem;
+    left: .4rem;
+    height: .5rem;
+    font-size: .6rem;
+    font-weight: bold;
+    color: #555;
+}
+/*　　 副メニュー　　 */
+.menu_btn2{
+    /* display: none; */
+    position:fixed;
+    top: .25rem;
+    right: .3rem;
+    width: 2rem;
+    height: 2.5rem;
+    background-color: #ffccbb;
+    cursor: pointer;
+}
+.sp_2{
+    position: absolute;
+    top: .5rem;
+    left: .9rem;
+    display: inline-block;
+    width: .2rem;
+    height: .2rem;
+    border-radius: 50%;
+    border: .05rem solid #555;
+    background-color: #555;
+    vertical-align: top;
+}
+.sp5{
+    transition: .2s;
+}
+.sp5{
+    margin-top: .5rem;
+    transition: .2s;
+}
+.sp6{
+    margin-top: 1rem;
+    transition: .2s;
+}
+.sp_2.close{
+    position: absolute;
+    top: .5rem;
+    left: .3rem;
+    display: inline-block;
+    width: 1.5rem;
+    height: .05rem;
+    border-radius: .05rem;
+    border: .05rem solid #555;
+    background-color: #555;
+    vertical-align: top;
+}
+.sp4.close{
+
+    transform:translateY(.5rem) rotate(45deg);
+}
+.sp5.close{
+    display: none;
+}
+.sp6.close{
+    transform:translateY(-.5rem) rotate(-45deg);
+   
+}
+
+.s_menu2{
+    position: fixed;
+    top: 2rem;
+    right: .6rem;
+    height: .5rem;
+    font-size: .6rem;
+    font-weight: bold;
+    color: #555;
+}
+
+.nav1{
+    /* display: none; */
+    position: fixed;
+    top: 4rem;
+    left: -20rem;
+    z-index: 300;
+    background-color: #ffccbb;
+    width: 12rem;
+    height: 20rem;
+    transition: .3s ease-in;
+}
+
+.nav1.open{
+    left: 0rem;
+}
+
+.nav1 ul li{
+    margin: 1rem .3rem;
+}
+.nav1 ul li::before{
+    content: '>';
+    color: #555;
+    font-weight: bold;
+}
+
+/* .nav1 ul li:not(:nth-child(2))::before{
+    content: '>';
+    color: #555;
+    font-weight: bold;
+} */
+
+.status1{
+    /* display: none; */
+    position: fixed;
+    top: 4rem;
+    right: -20rem;
+    z-index: 300;
+    background-color: #ffccbb;
+    width: 12rem;
+    height: 20rem;
+    transition: .3s ease-in;
+
+}
+.status1.open{
+    right: 0rem;
+}
+
+.status1 ul li{
+    margin: 1rem .3rem;
+}
+.status1 ul li::before{
+    content: '>';
+    color: #555;
+    font-weight: bold;
+}
+
+.status1 ul{
+    list-style: none;
+    margin-top: .5rem;
+    margin-left: .5rem;
+}
+.status1 ul li a{
+    margin: 1rem 0;
+    padding:0 .5rem .5rem .5rem;
+    color: #555; 
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+.nav1 ul{
+    list-style: none;
+    margin-top: .5rem;
+    margin-left: 0rem;
+    
+}
+.nav1 ul li a{
+    margin: 1rem 0;
+    padding:0 .5rem .5rem .5rem;
+    color: #555; 
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+
+/* .title{
+    text-align: center;
+    height: 1.5rem;
+    font-size: .9rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+    color: #555;
+}
+.nav{
+    background-color:#1d80e9;
+    height: 2rem;
+    text-align: center;
+}
+.nav ul{
+    list-style-type: none;
+}
+.nav>ul>li:nth-of-type(2){
+    font-weight: bold;
+}
+.nav ul li{
+    display: inline-block;
+    height: 2rem;
+    line-height: 2rem;
+    background-color:#1d80e9;
+}
+.nav ul li:not(:nth-child(4)){
+    margin-right: 1rem;
+}
+.nav ul li:hover{
+    background-color: #cc9999;
+}
+.nav ul li :nth-child(2){
+    pointer-events: none;
+}
+.nav a{
+    color:white;
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 2rem;
+    display: block;
+} */
+
+
+
+
+/* .plan_title{
+    width: 100vw;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    color: #555;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ffccff;
+    border-top: 0.2rem solid #ccc;
+    border-bottom: 0.2rem solid #ccc;
+} */
+
+
+
+
+.container{
+    display: flex;
+}
+
+.display_change{ 
+    margin:4rem 0 .5rem 0;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    font-size: .9rem;
+}
+.button{
+    width: 5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    border-radius: .5rem;
+    text-align: center;
+    font-size: .8rem;
+    background-color: #fff;
+    color: #333;
+    transition: .3s;
+}
+.button:hover{
+    cursor: pointer;
+    background-color: #0f0;
+}
+.display_change{
+    font-size: .6rem;
+}
+#display-k{
+    border: none;
+    width: 5rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #f00;
+    color: #fff;
+    opacity: .2;
+}
+#display-j{
+    border: none;
+    width: 5rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: #00f;
+    color: #fff;
+    opacity: .2;
+}
+
+#display-k.active{
+    opacity: 1;
+}
+#display-j.active{
+    opacity: 1;
+}
+
+.container1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*  商品説明部分　（特徴、加入要件、メリット） */
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* .container2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+
+.font-lg{
+    margin-top: 1.1rem;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.font-m{
+    margin-top: .5rem;
+    font-size: .9rem;
+    font-weight: bold;   
+}
+.font-m2{
+    margin-top: .3rem;
+    font-size: .8rem;
+    font-size: 300;
+}
+.font-s{
+    font-size: .7rem;
+}
+
+.item-j,.item-k{
+    margin-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.item-j{
+    display: none;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    font-size: .8rem;
+}
+
+/* 事務費（テーブル） */
+table{
+    margin-right: .5rem;
+}
+table,table tr,table th,table td{
+    border: .05rem solid #555;
+    border-collapse: collapse;
+    padding:.3rem .4rem .3rem .4rem;
+    text-align: center;
+    font-size: .9rem;
+    color: #555;
+    background-color: #fff;
+}
+table th{
+    background-color: #eee;
+}
+table td:nth-child(3){
+    text-align: left;
+}
+table th:nth-child(1){
+    width: 5.4rem;
+}
+
+img{
+    width: 90vw;
+    max-width: 30rem;
+    height:auto;
+}
+
+/* 運用商品 */
+
+
+
+
+
+@media (max-width:700px) {
+    html{
+        font-size: 18px;
+    }
+    .nav ul li:not(:nth-child(4)){
+        margin-right: .3rem;
+    }
+    /* .nav1{
+        display: none;
+    } */
+    /* .nav2{
+        display: block;
+    } */
+}

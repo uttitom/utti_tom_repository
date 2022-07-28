@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 22px;
+}
+@media (min-width:800px) {
+  html {
+    font-size: 30px;
+  }
+  .container01{
+    margin: .2rem 0;
+  }
+}
+
+.title {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: .2rem;
+}
+
+.container{
+  max-width: 25rem;
+  margin: 0 auto;
+}
+
+.container01 {
+  max-width: 25rem;
+  margin: 0 auto;  
+  border: 1rem solid #cff;
+  background-color: #cff;
+  display: grid;
+  grid-template:
+   "result1 result2 result3" 3rem
+   "interest interest interest" 3rem
+   "premium premium premium" 5rem 
+   "term term term" 5rem
+   "return1 return2 return3" 2rem
+   /1fr 2fr 1fr;
+}
+
+.result1,.result2,.result3{
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #fff;
+  color: #77f;
+}
+.result2{
+  color: red;
+  font-size: 1.1rem;
+}
+span{
+  font-size: .9rem;
+}
+label>span,.premium1>span,.term1>span{
+  font-weight: bold;
+}
+
+.interest>label>span,.premium1>span,.term1>span{
+  color: #77f;
+  
+}
+.premium2>span,.term2>span{
+  font-size: .8rem;
+  color: #555;
+}
+
+output,select{
+  font-weight: bold;
+  color: red;
+}
+
+.result1 {
+  grid-area: result1;
+  text-align: right;
+  line-height: 2rem;
+  border-top: .5rem solid #5df;
+  border-bottom: .5rem solid #5df;
+  border-left: .5rem solid #5df;
+}
+
+.result2 {
+  grid-area: result2;
+  line-height: 2rem;
+  text-align: right;
+  border-top: .5rem solid #5df;
+  border-bottom: .5rem solid #5df;
+}
+
+.result3 {
+  grid-area: result3;
+  text-align: left;
+  line-height: 2rem;
+  border-top: .5rem solid #5df;
+  border-bottom: .5rem solid #5df;
+  border-right: .5rem solid #5df;
+}
+
+.interest{
+  margin-top: 1rem;
+  grid-area: interest;
+  text-align: center;
+  line-height: 2rem;
+}
+
+select{
+  font-size: 1rem;
+  margin-left: 2rem;
+}
+
+.premium {
+  grid-area: premium;
+  text-align: center;
+  line-height: 3rem;
+}
+
+.term {
+  grid-area: term;
+  text-align: center;
+  line-height: 3rem;
+}
+
+input[type=range]{
+  -webkit-appearance: none;
+  height: 0.8rem;
+  width: 10rem;
+  background-color: #fcc;
+  border-radius: 0.2rem;
+}
+
+.return{
+  grid-area: return3;
+  display: block;
+  text-align: right;
+  margin-top: 1.5rem;
+  margin-right: 1rem;
+  font-size: .8rem;
+}
